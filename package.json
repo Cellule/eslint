@@ -8,7 +8,7 @@
   },
   "main": "./lib/api.js",
   "scripts": {
-    "test": "node Makefile.js test",
+    "test": "mocha -c tests/lib/rules/**/*.js -r ./babelTester.js",
     "lint": "node Makefile.js lint",
     "patch": "node Makefile.js patch",
     "minor": "node Makefile.js minor",
@@ -58,6 +58,7 @@
     "xml-escape": "~1.0.0"
   },
   "devDependencies": {
+    "babel-eslint": "^3.1.9",
     "beefy": "^1.0.0",
     "brfs": "0.0.9",
     "browserify": "^8.1.3",
